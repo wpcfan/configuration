@@ -34,6 +34,7 @@
     - role: xserver
       when: XSERVER_GIT_IDENTITY|length > 0
     - edx_ansible
+    - veda_web_frontend
     - analytics_api
     - ecommerce
     - credentials
