@@ -12,6 +12,7 @@
 #
 dependencies:
   - role: video_pipeline_base
+    video_pipeline_base_service_name: '{{ veda_web_frontend_service_name }}'
   - role: edx_django_service
     edx_django_service_repo: 'edx-video-pipeline'
     edx_django_service_version: '{{ VIDEO_PIPELINE_BASE_VERSION }}'
@@ -36,11 +37,10 @@ dependencies:
     edx_django_service_db_user: '{{ VIDEO_PIPELINE_BASE_MYSQL_USER }}'
     edx_django_service_db_password: '{{ VIDEO_PIPELINE_BASE_MYSQL_PASSWORD }}'
     edx_django_service_default_db_atomic_requests: false
-    edx_django_service_social_auth_edx_oidc_key: '{{ VIDEO_PIPELINE_BAS_SOCIAL_AUTH_EDX_OIDC_KEY }}'
-    edx_django_service_social_auth_edx_oidc_secret: '{{ VIDEO_PIPELINE_BAS_SOCIAL_AUTH_EDX_OIDC_SECRET }}'
-    edx_django_service_social_auth_redirect_is_https: '{{ VIDEO_PIPELINE_BAS_SOCIAL_AUTH_REDIRECT_IS_HTTPS }}'
+    edx_django_service_social_auth_edx_oidc_key: '{{ VIDEO_PIPELINE_BASE_SOCIAL_AUTH_EDX_OIDC_KEY }}'
+    edx_django_service_social_auth_edx_oidc_secret: '{{ VIDEO_PIPELINE_BASE_SOCIAL_AUTH_EDX_OIDC_SECRET }}'
+    edx_django_service_social_auth_redirect_is_https: '{{ VIDEO_PIPELINE_BASE_SOCIAL_AUTH_REDIRECT_IS_HTTPS }}'
     edx_django_service_extra_apps: '{{ VEDA_WEB_FRONTEND_EXTRA_APPS }}'
     edx_django_service_automated_users: '{{ VEDA_WEB_FRONTEND_AUTOMATED_USERS }}'
     edx_django_service_use_python3: false
-    edx_django_service_config: '{{ VIDEO_PIPELINE_BASE_CONFIG }}'
-    video_pipeline_base_service_name: '{{ veda_web_frontend_service_name }}'
+    edx_django_service_config: !!null
