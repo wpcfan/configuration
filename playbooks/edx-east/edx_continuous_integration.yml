@@ -34,10 +34,10 @@
     - role: xserver
       when: XSERVER_GIT_IDENTITY|length > 0
     - edx_ansible
-    - veda_web_frontend
     - analytics_api
     - ecommerce
     - credentials
+    - veda_web_frontend
     - oauth_client_setup
     - role: datadog
       when: COMMON_ENABLE_DATADOG
